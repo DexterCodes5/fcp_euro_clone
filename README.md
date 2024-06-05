@@ -12,7 +12,7 @@ and transmission.
 The frontend has a complex layout, it is fully responsive
 and utilizes reuse of CSS classes. There is a frontend branch.
 
-Backend Functionality:
+Functionality:
 1. JWT Authentication, backend and frontend implementation
 2. Spring Mail
 3. Email verification
