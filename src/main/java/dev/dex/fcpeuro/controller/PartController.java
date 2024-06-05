@@ -1,12 +1,12 @@
 package dev.dex.fcpeuro.controller;
 
-import dev.dex.fcpeuro.service.PartService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import dev.dex.fcpeuro.model.*;
+import dev.dex.fcpeuro.service.*;
+import lombok.*;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 @RestController
 @RequestMapping("/api/v1/parts")
@@ -15,18 +15,22 @@ public class PartController {
     private final PartService partService;
 
     @GetMapping
-    public ResponseEntity<?> getAll() {
-        return ResponseEntity.ok(partService.findAll());
-    }
-
-    @GetMapping("/{vehicleId}")
-    public ResponseEntity<?> getByVehicle(@PathVariable int vehicleId) {
-        return ResponseEntity.ok(partService.findByVehicleId(vehicleId));
+    public List<PartResponse> getParts(@RequestParam int vehicleId,
+                                       @RequestParam(required = false) String category,
+                                       @RequestParam(required = false) String quality,
+                                       @RequestParam(required = false) String brand,
+                                       @RequestParam(name = "search_only", required = false) String searchOnly,
+                                       @RequestParam(required = false) String order) {
+        return partService.getPartResponses(category, vehicleId, quality, brand, searchOnly, order);
     }
 
     @GetMapping("/get-part-by-url/{url}")
     public ResponseEntity<?> getByUrl(@PathVariable String url) {
-        System.out.println("Here");
         return ResponseEntity.ok(partService.findByUrl(url));
+    }
+
+    @GetMapping("/get-part-by-id/{id}")
+    public PartResponse getPartById(@PathVariable int id) {
+        return partService.findById(id);
     }
 }

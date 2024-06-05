@@ -1,9 +1,13 @@
 package dev.dex.fcpeuro.entity;
 
+import com.fasterxml.jackson.annotation.*;
+import dev.dex.fcpeuro.entity.category.*;
+import dev.dex.fcpeuro.entity.kitpart.*;
+import dev.dex.fcpeuro.entity.vehicle.*;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Getter
@@ -18,21 +22,26 @@ public class Part {
     private String title;
     private String url;
     private String sku;
+    private Integer fcpEuroId;
     private Integer quantity;
     private Double price;
     private String quality;
     private List<String> mfgNumbers;
     private Boolean kit;
     private String madeIn;
-    private String productInformation;
-    private String category1;
-    private String category2;
-    private String category3;
     private List<String> img;
-
+    private Boolean universal;
+    private String productInformationHtml;
     @ManyToOne
     @JoinColumn(name = "brand_id")
     private Brand brand;
+
+    @ManyToMany
+    @JoinTable(name = "vehicle_part",
+            joinColumns = @JoinColumn(name = "part_id"),
+            inverseJoinColumns = @JoinColumn(name = "vehicle_id")
+    )
+    private List<Vehicle> vehicles;
 
     @ManyToMany
     @JoinTable(name = "part_oe_number",
@@ -41,17 +50,12 @@ public class Part {
     )
     private List<OENumber> oeNumbers;
 
-    @ManyToMany
-    @JoinTable(name = "kit_part",
-            joinColumns = @JoinColumn(name = "kit_id"),
-            inverseJoinColumns = @JoinColumn(name = "part_id")
-    )
-    private List<Part> parts;
+    @ManyToOne
+    @JoinColumn(name = "category_bot_id")
+    @JsonIgnore
+    private CategoryBot categoryBot;
 
-    @ManyToMany
-    @JoinTable(name = "part_vehicle",
-            joinColumns = @JoinColumn(name = "part_id"),
-            inverseJoinColumns = @JoinColumn(name = "vehicle_id")
-    )
-    private List<Vehicle> vehicles;
+    @OneToMany
+    @JoinColumn(name = "kit_id")
+    private List<KitPart> kitParts;
 }

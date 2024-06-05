@@ -22,7 +22,7 @@ public class ImageService {
 
     public ImageAndType downloadImage(String name) {
         Image image = imageRepository.findByName(name)
-                .orElseThrow(() -> new RuntimeException("Image not found"));
+                .orElseThrow(() -> new RuntimeException("Image not found: " + name));
         String filePath = image.getFilePath();
         byte[] img;
         try {

@@ -17,4 +17,5 @@ public class Brand {
     private Integer id;
     private String name;
     private String img;
+    private String aboutHtml;
 }
