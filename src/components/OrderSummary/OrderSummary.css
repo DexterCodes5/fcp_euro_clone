@@ -1,0 +1,126 @@
+.orderSummary__panel {
+    font-size: 14px;
+    line-height: 1;
+    color: #171819;
+    background: #f0f8ff;
+    padding: 30px;
+    margin-bottom: 12px;
+}
+
+.orderSummary__header {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.orderSummary__refNumber {
+    margin-top: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: solid 1px #caccce;
+    font-weight: 600;
+}
+
+.orderSummary__refNumber > a {
+    margin-left: 5px;
+}
+
+.orderSummary__breakdown {
+    list-style: none;
+    margin: 0;
+    font-size: 15px;
+    line-height: 28.5px;
+}
+
+.orderSummary__breakdown > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderSummary__breakdown > li:nth-last-child(2) {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: solid 1px #caccce;
+}
+
+.orderSummary__breakdown > li:last-child {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: solid 1px #caccce;
+}
+
+.orderSummary__breakdown > li > span:last-child {
+    font-weight: 700;
+}
+
+.orderSummary__freeShipping {
+    margin-bottom: 25px;
+}
+
+.orderSummary__caption {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.orderSummary__caption-i {
+    color: #38a4fe;
+    font-size: 15px;
+}
+
+.progressBar__track {
+    height: 10px;
+    background: #b3dcff;
+    border-radius: 20px;
+    border: solid 1px #95999d;
+}
+
+.progressBar__bar {
+    background: #23588f;
+    height: 100%;
+    width: 0;
+    transition: all .15s ease-in;
+}
+
+.orderSummary_embeddedForm {
+    display: flex;
+}
+
+.orderSummary__embeddedInput {
+    border: solid 1px #afb3b6;
+    border-right: none;
+    border-radius: 0;
+    padding: 14px;
+    height: 40px;
+}
+
+.orderSummary__embeddedSubmit {
+    width: 80px;
+    height: 40px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    background: #fff;
+    border: solid 1px #0161b2;
+    color: #0161b2;
+}
+
+.orderSummary_cta {
+    background: #23588f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    transition: all .1s ease-in;
+    width: 100%;
+}
+
+.orderSummary_cta:hover {
+    background: #38a4fe;
+}

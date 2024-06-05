@@ -1,0 +1,164 @@
+.header-top-mobile {
+    display: none;
+    padding: 0.5rem;
+}
+
+.header-top-mobile-top {
+    display: flex;
+}
+
+.hamburger-container {
+    padding: 5px 5px;
+    position: relative;
+    width: 20px;
+    height: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transition: background-color 0.125s 0.175s ease-in;
+}
+
+.hamburger::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+
+.hamburger::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburger-active .hamburger {
+    transition-delay: 0s;
+    background-color: transparent;
+}
+
+.hamburger-active .hamburger::before {
+    left: -40px;
+    top: -40px;
+    transform: translate3d(40px, 40px, 0) rotate(45deg);
+}
+
+.hamburger-active .hamburger::after {
+    right: -40px;
+    top: -40px;
+    transform: translate3d(-40px, 40px, 0) rotate(-45deg);
+}
+
+.header-logo-mobile {
+    width: 120px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+.htm-sc {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+}
+
+.htm-sc-icon {
+    cursor: pointer;
+}
+
+.htm-menu {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.htm-menu > li > a {
+    display: block;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+}
+
+.htm-menu > li > a:hover {
+    color: #38a4fe;
+}
+
+.htm-menu-a-triangle {
+    position: relative;
+}
+
+.htm-menu-a-triangle:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #38a4fe;
+    position: absolute;
+    top: 45%;
+    right: 1rem;
+}
+
+.htm-menu-a-triangle-active::after {
+    border-top: none;
+    border-bottom: 5px solid #38a4fe;
+}
+
+.htm-dropdown {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.1);
+    overflow: hidden;
+    user-select: none;
+    list-style: none;
+    margin-left: 0;
+}
+
+.htm-dropdown > li > a {
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+}
+
+.htm-dropdown > li > a:hover {
+    color: #38a4fe;
+}
+
+.htm-dropdown > li > a > p {
+    margin: 0;
+}
+
+.htm-search {
+    display: flex;
+    margin: 20px 0;
+}
+
+@media (max-width: 1023px) {
+    .header-top-mobile {
+        display: block;
+    }
+}

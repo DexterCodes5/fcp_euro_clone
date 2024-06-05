@@ -1,0 +1,141 @@
+.part {
+    border-top: 1px solid #d9dee2;
+    cursor: pointer;
+}
+
+.part-img-container {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.part-img {
+    max-height: 140px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.part-body {
+    margin: 1rem;
+}
+
+.part-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.part-other-models {
+    color: #687475;
+    margin-bottom: 1rem;
+}
+
+.part__brandName {
+    color: #687475;
+    margin: 0;
+}
+
+.rating-stars {
+    font-size: 15px;
+    color: #fb0;
+}
+
+.part-ratings {
+    text-decoration: underline;
+    margin-left: .3rem;
+    font-size: .95rem;
+}
+
+.part-buy {
+    padding: 1rem 1rem 1rem 0;
+    font-size: .95rem;
+}
+
+.part-availability {
+    padding-left: 1rem;
+}
+
+.part__check {
+    color: #11DC5C;
+}
+
+.part-stock {
+    display: none;
+}
+
+.part-ship {
+    margin-bottom: 1rem;
+    color: #687475;
+    text-align: center;
+}
+
+.part-truck {
+    color: black;
+}
+
+.part-qty-buy {
+    text-align: right;
+}
+
+.part-qty {
+    display: inline-block;
+}
+
+.part-qty-span {
+    font-weight: 700;
+}
+
+.part-qty-input {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 45px;
+    height: 1.9rem;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.part-qty-input::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.part-add {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.part-add-price {
+    background: #fc2c37;
+    border-radius: 2px 0 0 2px;
+    color: white;
+    padding: 4px 10px;
+}
+
+.part-add-plus {
+    background: #bf030d;
+    border-radius: 0 2px 2px 0;
+    color: white;
+    padding: 4px 10px;
+}
+
+@media (min-width: 1024px) {
+    .part-body {
+        margin: 1rem 0;
+    }
+
+    .part-buy {
+        text-align: right;
+    }
+
+    .part-stock {
+        display: block;
+    }
+
+    .part-ship {
+        text-align: right;
+    }
+
+    .part-qty-buy {
+        margin-top: 1rem;
+    }
+}

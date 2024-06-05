@@ -1,0 +1,33 @@
+.vehicleSelector__select {
+    width: 100%;
+    height: 2.43rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    background-color: #fefefe;
+    font-family: inherit;
+    font-weight: 500;
+    appearance: none;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    background-image: url("../../../../icons/dropdownArrow.png");
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    background-position: right .5rem center;
+}
+
+.vehicleSelector__select:focus {
+    outline: none;
+}
+
+@media (max-width: 640px) {
+    .vehicleSelector__select {
+        height: 2rem;
+        padding: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .vehicleSelector__select:last-child {
+        margin-bottom: 0;
+    }
+}

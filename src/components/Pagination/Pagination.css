@@ -1,0 +1,23 @@
+.pages {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.pages__link,
+.pages__link--current {
+    color: #687475;
+    font-size: .8rem;
+    display: inline-block;
+    padding: .2rem .7rem;
+    border-radius: 2px;
+    border: 1px solid #d9dee2;
+    margin-right: .25rem;
+}
+
+.pages__link:hover {
+    border-color: #38a4fe;
+}
+
+.pages__link--current {
+    border-color: #38a4fe;
+}

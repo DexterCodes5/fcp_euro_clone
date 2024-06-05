@@ -1,0 +1,146 @@
+.lineItem {
+    display: flex;
+    padding: 30px 12px 30px 0;
+    border-bottom: solid 1px #caccce;
+}
+
+.lineItem__leftInfo {
+    flex-grow: 1;
+    display: flex;
+}
+
+.lineItem__photo {
+    display: block;
+    width: 130px;
+    margin-right: 15px;
+}
+
+.lineItem__meta > * {
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.lineItem__name > a {
+    font-weight: 700;
+}
+
+.lineItem__brand {
+    color: #7a8085;
+}
+
+.lineItem__fulfillment {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lineItem__rightInfo {
+    flex-basis: 260px;
+}
+
+.lineItem__breakdown {
+    display: flex;
+    align-items: center;
+}
+
+.lineItem__breakdown > div {
+    flex: 1;
+}
+
+.lineItem__price {
+    font-weight: 400;
+}
+
+.lineItem__quantity {
+    display: flex;
+    justify-content: center;
+}
+
+.lineItem__quantity-i {
+    display: none;
+}
+
+.lineItem__quantity > input {
+    width: 48px;
+    height: 30px;
+    margin: 0;
+}
+
+.lineItem__quantity > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.lineItem__total {
+    text-align: right;
+    font-weight: 600;
+}
+
+.lineItem__actions {
+    display: flex;
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 63.99875em) {
+    .lineItem {
+        display: block;
+        padding: 22px 0;
+    }
+
+    .lineItem__leftInfo {
+        margin-bottom: 15px;
+    }
+
+    .lineItem__photo {
+        width: 35%;
+    }
+
+    .lineItem__meta {
+        width: 65%;
+    }
+
+    .lineItem__fulfillment {
+        font-size: 16px;
+    }
+
+    .lineItem__rightInfo {
+        display: flex;
+    }
+
+    .lineItem__breakdown {
+        width: 35%;
+        margin-right: 15px;
+    }
+
+    .lineItem__price {
+        display: none;
+    }
+
+    .lineItem__quantity {
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    .lineItem__quantity-i {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 6px;
+        color: #38a4fe;
+        font-size: 18px;
+    }
+
+    .lineItem__quantity input {
+        padding-left: 26px;
+        font-weight: 700;
+        box-shadow: none;
+        border: none;
+    }
+
+    .lineItem__quantity input:focus {
+        border: none
+    }
+
+    .lineItem__actions {
+        width: 65%;
+        margin-top: 0;
+    }
+}

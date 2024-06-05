@@ -1,0 +1,19 @@
+.ratingStars {
+    width: 90px;
+    height: 22px;
+    position: relative;
+}
+
+.ratingStars__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ratingStars__star {
+    color: #fb0;
+    display: inline;
+}

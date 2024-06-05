@@ -1,0 +1,43 @@
+.topBar {
+    border-bottom: solid 1px #d9dee2;
+}
+
+.topBar__container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.topBar__header {
+    height: 80px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.topBar__logo {
+    width: 324px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.topBar__headerMobile {
+    padding: .5rem;
+}
+
+.topBar__logoMobile {
+    width: 120px;
+    height: 26px;
+    margin-left: .75rem;
+}
+
+@media screen and (min-width: 40em) {
+    .topBar__headerMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 39.99875em) {
+    .topBar__header {
+        display: none;
+    }
+}

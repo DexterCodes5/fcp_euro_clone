@@ -1,0 +1,235 @@
+.register-notification {
+    background-color: #38a4fe;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sticky-container {
+    position: relative;
+}
+
+.login__form {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/create-account-background.webp");
+    background-size: 60%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.login__slide {
+    width: 100%;
+    max-width: 650px;
+}
+
+.login__content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login__homeLink {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.auth {
+    text-align: center;
+}
+
+.auth__logo {
+    width: 160px;
+    height: 28px;
+    margin-bottom: 1rem;
+}
+
+.logoBlack {
+    background-image: url("../images/logo-black.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.auth__login, .auth__signup {
+    overflow: hidden;
+}
+
+.auth h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+.auth input {
+    border-color: #d9dee2;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+.auth__redirects {
+    font-size: .9rem;
+    margin-top: .75rem;
+}
+
+.auth__redirects > a {
+    color: #687475;
+    transition: color .1s ease-in;
+    cursor: pointer;
+}
+
+.auth__redirects > a:hover {
+    color: #38a4fe;
+}
+
+.auth__checkbox {
+    text-align: left;
+}
+
+.checkbox {
+    margin: 1rem 0;
+    display: inline-block;
+    position: relative;
+}
+
+.auth__checkbox label {
+    color: #687475;
+    margin-left: .25rem;
+    cursor: pointer;
+    vertical-align: top;
+    display: inline;
+}
+
+.checkbox label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.25em;
+    height: 1.25em;
+    background: #fff;
+    border: 1px solid #38a4fe;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after, .checkbox input[type="radio"]:checked+label:after {
+    transform: rotate(-45deg);
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: .75em;
+    height: .375em;
+    border: .2rem solid #38a4fe;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+.auth__button {
+    background: #38a4fe;
+    border: solid 1px #38a4fe;
+    margin-top: 1.5rem;
+    transition: all .15s ease-in;
+}
+
+.auth__button:hover {
+    background: #23588f;
+    border: solid 1px #23588f;
+}
+
+.auth__button.isLoading {
+    background: #266ba4;
+}
+
+.login__slides > div {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__explore {
+    position: relative;
+    background-image: url("../images/background.webp");
+    background-size: 60%;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.login__slide {
+    padding: 0 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 668px;
+}
+
+.login__qualities {
+    color: #687475;
+    margin-bottom: 1rem;
+}
+
+.login h2 {
+    text-transform: uppercase;
+    font-size: 3.1rem;
+    font-weight: 800;
+}
+
+.login__explore p {
+    color: #687475;
+}
+
+.login__explore strong {
+    color: #171819;
+}
+
+.login__arrowIndicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    background: #38a4fe;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.25);
+    color: white;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.login--mobileIndicator {
+    bottom: -25px;
+}
+
+.login__lifetime {
+    background-color: #38a4fe;
+    color: white;
+}
+
+.auth__subText {
+    font-size: .9rem;
+    color: #687475;
+    margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 63.99875em) {
+    .show-for-large {
+        display: none;
+    }
+} 
+
+@media screen and (min-width: 64em) {
+    .sticky.is-stuck-large {
+        position: sticky;
+        top: 0;
+    }
+    
+    .hide-for-large {
+        display: none;
+    }
+}

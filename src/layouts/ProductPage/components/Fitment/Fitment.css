@@ -1,0 +1,24 @@
+.fitmentGuide__models {
+    column-count: 2;
+    column-gap: 2em;
+}
+
+.fitmentGuide__applicationGroup {
+    padding: 2rem;
+    border-top: solid 2px #38a4fe;
+    background: #f7f8f9;
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    width: 100%;
+}
+
+.fitmentGuide__models ul {
+    list-style: none;
+    margin: 0;
+}
+
+.fitmentGuide__models ul li {
+    color: #687475;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}

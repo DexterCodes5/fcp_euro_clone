@@ -1,0 +1,149 @@
+.returnLink {
+    font-size: 14px;
+    font-weight: 400;
+    transition: all .15s ease-in;
+}
+
+.returnLink:hover {
+    color: #0161b2;
+}
+
+.returnLink-i {
+    margin-right: 4px;
+}
+
+.cartTabs {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #caccce;
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+}
+
+.cartTabs > li > a {
+    display: flex;
+    height: 32px;
+    font-weight: 700;
+    color: #171819;
+    border-bottom: solid 3px #38a4fe;
+}
+
+.cart__header {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.cart__headerTitle {
+    font-size: 36px;
+    font-weight: 600;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.cart__options {
+    flex-basis: 260px;
+    display: flex;
+    margin-right: 12px;
+}
+
+.iconButton {
+    width: 50%;
+    padding: 8px;
+    background: #f2f2f3;
+    color: #7a8085;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.iconButton:hover {
+    color: #56595d;
+}
+
+.iconButton-i {
+    margin-right: 4.5px;
+    font-size: 16px;
+}
+
+.iconButton-i.red {
+    color: red;
+}
+
+.cart__lineHeader {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 6.65px 12px;
+    padding-left: 0;
+    border-top: solid 1px #caccce;
+    border-bottom: solid 1px #caccce;
+}
+
+.cart__lineHeader>li {
+    flex-basis: 86px;
+    color: #7a8085;
+}
+
+.cart__lineHeader > li:first-of-type {
+    flex-grow: 1;
+}
+
+.cart__lineHeader li:nth-of-type(2) {
+    text-align: left;
+}
+
+.cart__lineHeader li:nth-of-type(3) {
+    text-align: center;
+}
+
+.cart__lineHeader li:last-of-type {
+    text-align: right;
+}
+
+.cart__items {
+    margin-bottom: 36px;
+}
+
+.cart__gurantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f3ff;
+    padding: 22px;
+}
+
+.cart__lifetimeCreative {
+    width: 100px;
+    margin-right: 18px;
+}
+
+.cart__guranteeStatement {
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width: 63.99875em) { 
+    .cart__headerTitle {
+        font-size: 28px;
+        flex-basis: 35%;
+    }
+
+    .cart__options {
+        margin-right: 0;
+        flex-basis: 65%;
+    }
+    
+    .cart__lineHeader {
+        display: none;
+    }
+
+    .cart__items {
+        border-top: 1px solid #caccce;
+    }
+}
