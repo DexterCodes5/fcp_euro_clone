@@ -10,7 +10,7 @@ database. They are retrieved based on vehicle model, engine
 and transmission.
 
 The frontend has a complex layout, it is fully responsive
-and utilizes reuse of CSS classes.
+and utilizes reuse of CSS classes. There is a frontend branch.
 
 Backend Functionality:
 1. JWT Authentication, backend and frontend implementation
